@@ -25,8 +25,17 @@ public class ConexionMongoDB : MonoBehaviour {
         MongoClient client = new MongoClient(stringConexion);
         var server = client.GetServer();
         var bd = server.GetDatabase("scary-monstersbd");
-       
 
         Debug.Log("Conexion Establecida con éxito");
+
     }
+	void Update()
+	{
+		if(Application.internetReachability != NetworkReachability.NotReachable)
+		{
+			Debug.Log ("Tienes Conexion");
+		}else{
+			Debug.Log ("Has perdido la conexion");
+		}
+	}
 }
