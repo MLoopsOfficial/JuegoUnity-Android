@@ -29,13 +29,5 @@ public class ConexionMongoDB : MonoBehaviour {
         Debug.Log("Conexion Establecida con éxito");
 
     }
-	void Update()
-	{
-		if(Application.internetReachability != NetworkReachability.NotReachable)
-		{
-			Debug.Log ("Tienes Conexion");
-		}else{
-			Debug.Log ("Has perdido la conexion");
-		}
-	}
+
 }

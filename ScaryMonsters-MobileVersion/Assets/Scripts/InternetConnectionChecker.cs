@@ -10,15 +10,14 @@ public class InternetConnectionChecker : MonoBehaviour {
 	public Image iconoInternet;
 	public Image sinConexImg;
 	public Image alertaConexImg;
-	// Use this for initialization
+
 	void Start () {
 		hayInternet = true;
 		iconoInternet.enabled = false;
 		sinConexImg.enabled = false;
 		alertaConexImg.enabled = false;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		if(Application.internetReachability != NetworkReachability.NotReachable)
 		{
