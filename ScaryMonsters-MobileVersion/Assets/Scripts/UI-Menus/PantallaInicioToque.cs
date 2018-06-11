@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PantallaInicioToque : MonoBehaviour {
 	public RepositorioSonidos repoSonidos;
 	public Sonidos fuenteSonidos;
 	public GameObject pantallaInicio;
+	public Image fadeImage;
+
 	// Use this for initialization
 	void Start () {
 		fuenteSonidos = GameObject.Find ("Sonidos").GetComponent<Sonidos>();
@@ -19,9 +22,21 @@ public class PantallaInicioToque : MonoBehaviour {
 				Debug.Log ("Juego Iniciado...");
 				fuenteSonidos.fuenteSonido.clip = repoSonidos.navegacion[0];
 				fuenteSonidos.fuenteSonido.Play ();
-				pantallaInicio.SetActive (false);
+				fadeImage.color.a++;
+				desactivarPantallaInicio ();
 			}
 		}
+	}
+	void desactivarPantallaInicio()
+	{
+		StartCoroutine (esperarDesactivacionPantallaInicio ());
+	}
+	IEnumerator esperarDesactivacionPantallaInicio()
+	{
+		
+		int tiempoEspera = 3;
+		yield return new WaitForSeconds (tiempoEspera);
+		pantallaInicio.SetActive (false);
 	}
 	void temporalUage(){
 		if (Input.touchCount > 0) {
