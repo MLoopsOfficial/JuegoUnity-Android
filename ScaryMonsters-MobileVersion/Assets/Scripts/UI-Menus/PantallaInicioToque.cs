@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class PantallaInicioToque : MonoBehaviour {
+	public ControladorMenus controlMenu;
 	public RepositorioSonidos repoSonidos;
 	public Sonidos fuenteSonidos;
 	public GameObject pantallaInicio;
@@ -37,6 +38,7 @@ public class PantallaInicioToque : MonoBehaviour {
 		int tiempoEspera = 3;
 		yield return new WaitForSeconds (tiempoEspera);
 		pantallaInicio.SetActive (false);
+
 	}
 	void temporalUage(){
 		if (Input.touchCount > 0) {

@@ -5,8 +5,6 @@ using UnityEngine;
 public class RepositorioSonidos : MonoBehaviour {
 	public AudioClip[] navegacion;
 	public AudioClip[] seleccion;
-	public int idNavegacion=0;
-	public int idSeleccion=0;
 	// Use this for initialization
 	void Start () {
 		
