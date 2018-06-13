@@ -1,16 +1,18 @@
 fileFormatVersion: 2
-guid: 0e52c552960b65f469160d5eb1607484
-timeCreated: 1528918458
+guid: f7442d0838c80d845b6dbeb4739b2112
+timeCreated: 1528924311
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: CajaMat
+    2100000: PicoMain__layoutPico_png
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Icosphere
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -85,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

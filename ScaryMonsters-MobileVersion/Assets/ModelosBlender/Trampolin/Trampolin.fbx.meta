@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 0e52c552960b65f469160d5eb1607484
-timeCreated: 1528918458
+guid: 2700593edc151944db4cd7efa81f2dbb
+timeCreated: 1528909730
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: CajaMat
+    2100000: TrampolinSuperior0
+    2100002: TrampolinInferior0
+    2100004: TrampolinSuperior1
+    2100006: Base
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Icosphere
   externalObjects: {}
   materials:
     importMaterials: 1
