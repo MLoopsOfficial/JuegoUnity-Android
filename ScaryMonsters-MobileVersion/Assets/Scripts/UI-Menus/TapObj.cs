@@ -14,11 +14,11 @@ public class TapObj : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began){
-			Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch(0).position);
-			RaycastHit hit;
-			if(Physics.Raycast(ray,out hit)){
-				Debug.Log (hit.transform.name);
-				if (hit.collider.name == nombreObjeto) {
+			Ray rayo = Camera.main.ScreenPointToRay (Input.GetTouch(0).position);
+			RaycastHit dest;
+			if(Physics.Raycast(rayo,out dest)){
+				Debug.Log (dest.transform.name);
+				if (dest.collider.name == nombreObjeto) {
 					tocando = true;
 				}
 			}
