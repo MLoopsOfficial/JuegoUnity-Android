@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TapObj : MonoBehaviour {
 	
-	public bool moverDelante=false;
+	public bool tocando=false;
+	public string nombreObjeto;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,10 +13,15 @@ public class TapObj : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch (0).phase == TouchPhase.Began);
-		//RaycastHit hit;
-		//if(hit.transform.name == " MoveForward"){
-		//	Debug.Log ("Apretaste Adelante");
-		//}
+		if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began){
+			Ray ray = Camera.main.ScreenPointToRay (Input.GetTouch(0).position);
+			RaycastHit hit;
+			if(Physics.Raycast(ray,out hit)){
+				Debug.Log (hit.transform.name);
+				if (hit.collider.name == nombreObjeto) {
+					tocando = true;
+				}
+			}
+		}
 	}
 }

@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControladorMenus : MonoBehaviour {
+public class AccesoRapido : MonoBehaviour {
 
-	public GameObject[] menus;
-	public int idMenu;
+	public GameObject botonHome;
+	public GameObject botonOpc;
+	public GameObject botonShop;
+
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		f_ActiveMenus ();
-	}
-	void f_ActiveMenus()
-	{
 		
 	}
 }
