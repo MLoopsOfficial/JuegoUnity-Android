@@ -7,10 +7,12 @@ public class AccesoRapido : MonoBehaviour {
 	public GameObject botonHome;
 	public GameObject botonOpc;
 	public GameObject botonShop;
+	public GameObject botonNotificaciones;
 
 	public bool homeActivo=true;
 	public bool opcActivo=true;
 	public bool shopActivo=true;
+	public bool botonNotif=true;
 	// Use this for initialization
 	void Start () {
 		
@@ -35,6 +37,12 @@ public class AccesoRapido : MonoBehaviour {
 			botonShop.SetActive (true);
 		} else {
 			botonShop.SetActive (false);
+		}
+		//Boton Notificacion
+		if (botonNotif == true) {
+			botonNotificaciones.SetActive (true);
+		} else {
+			botonNotificaciones.SetActive (false);
 		}
 	}
 }
