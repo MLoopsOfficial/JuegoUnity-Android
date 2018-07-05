@@ -11,8 +11,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: MLoopsOfficial
-  productName: Scary Monsters
+  companyName: com.MLoopsOfficial
+  productName: com.MLoops.Scary Monsters
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -24,14 +24,14 @@ PlayerSettings:
   m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
-  m_SplashScreenBackgroundLandscapeAspect: 1
-  m_SplashScreenBackgroundPortraitAspect: 1
+  m_SplashScreenBackgroundLandscapeAspect: 1.375
+  m_SplashScreenBackgroundPortraitAspect: 1.3752617
   m_SplashScreenBackgroundLandscapeUvs:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
-    height: 0.99999994
+    height: 1
   m_SplashScreenBackgroundPortraitUvs:
     serializedVersion: 2
     x: 0
@@ -39,9 +39,10 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 1e010a89a161b6b448011afcc4a815af, type: 3}
-    duration: 2
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  - logo: {fileID: 21300000, guid: 33664e0cbacd4f546a069a7085ccb5d7, type: 3}
+    duration: 5
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 33664e0cbacd4f546a069a7085ccb5d7,
+    type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -159,7 +160,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Android: com.MLoops.Cubix
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -243,7 +245,7 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+  androidSplashScreen: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
@@ -254,46 +256,46 @@ PlayerSettings:
   m_AndroidBanners:
   - width: 320
     height: 180
-    banner: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+    banner: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
   - m_BuildTarget: Android
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 55b5cc90665aa554f861619172b9eada, type: 3}
+      m_Icon: {fileID: 2800000, guid: dfe4cae2878825e4baf3165d984020e7, type: 3}
       m_Width: 36
       m_Height: 36
       m_Kind: 0
@@ -574,9 +576,9 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psp2ScriptOptimizationLevel: 0
   psmSplashimage: {fileID: 0}
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 55b5cc90665aa554f861619172b9eada,
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: c66e01788fd434f469f179c28d94fffb,
     type: 3}
-  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 55b5cc90665aa554f861619172b9eada,
+  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: dfe4cae2878825e4baf3165d984020e7,
     type: 3}
   spritePackerPolicy: 
   webGLMemorySize: 256
