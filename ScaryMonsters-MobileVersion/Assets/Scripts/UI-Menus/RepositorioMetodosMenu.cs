@@ -60,9 +60,9 @@ public class RepositorioMetodosMenu : MonoBehaviour {
 	{
 		//Musica
 		if(fuenteMusica.fuenteMusica.clip == repoMusica.musicaMenus[1]){
-		fuenteMusica.fuenteMusica.Stop ();
-		fuenteMusica.fuenteMusica.clip = repoMusica.musicaMenus [0];
-		fuenteMusica.fuenteMusica.Play ();
+			fuenteMusica.fuenteMusica.Stop ();
+			fuenteMusica.fuenteMusica.clip = repoMusica.musicaMenus [0];
+			fuenteMusica.fuenteMusica.Play ();
 		//
 		}
 
@@ -106,12 +106,12 @@ public class RepositorioMetodosMenu : MonoBehaviour {
 	public void menuExtrasActivo()
 	{
 		accesoRapido.SetActive (true);
+		menuExtras.SetActive (true);
 		nuevoRegistro.SetActive (false);
 		menuAjustes.SetActive (false);
 		menuPrincipal.SetActive (false);
 		pantallaInicio.SetActive (false);
 		submenuSonido.SetActive (false);
-		menuExtras.SetActive (true);
 		tienda.SetActive (false);
 		marcadores.SetActive (false);
 		creditos.SetActive (false);

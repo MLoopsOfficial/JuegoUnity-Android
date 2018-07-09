@@ -8,6 +8,7 @@ public class ControladorMenus : MonoBehaviour {
 	void Start()
 	{
 		repoMenu = GameObject.Find ("Canvas").GetComponent<RepositorioMetodosMenu> ();
+		repoMenu.pantallaInicioActiva ();
 	}
 	//Update
 	void Update () {
