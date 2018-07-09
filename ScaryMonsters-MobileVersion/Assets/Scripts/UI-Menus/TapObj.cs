@@ -30,102 +30,47 @@ public class TapObj : MonoBehaviour {
 				fuenteSonidos.fuenteSonido.Play ();
 				if(hit.transform.name == "InicioJuego")
 				{
-					controladorMenus.menus [1].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				if(hit.transform.name == "opc_SalirJuego")
 				{
-					controladorMenus.menus [0].SetActive(true);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				//NuevaPartida
 				if(hit.transform.name == "opc_NP")
 				{
-					controladorMenus.menus [2].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				//Extras
 				if(hit.transform.name == "opc_Extr")
 				{
-					controladorMenus.menus [4].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				//Ajustes
 				if(hit.transform.name == "opc_AJ")
 				{
-					controladorMenus.menus [3].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [5].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				//F_BotonHome
 				if(hit.transform.name == "botonHome")
 				{
-					controladorMenus.menus [1].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [5].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				if(hit.transform.name == "botonSettings")
 				{
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (true);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				if(hit.transform.name == "opc_Marcadores")
 				{
-					controladorMenus.menus [6].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [5].SetActive (false);
-					controladorMenus.menus [7].SetActive(false);
+					
 				}
 				if(hit.transform.name == "Cerrar")
 				{
-					controladorMenus.menus [6].SetActive(false);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive (true);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [5].SetActive (false);
-					controladorMenus.menus [7].SetActive(true);
+					
 				}
 				if(hit.transform.name == "opc_Creditos")
 				{
-					controladorMenus.menus [7].SetActive(true);
-					controladorMenus.menus [8].SetActive(true);
-					controladorMenus.menus [0].SetActive (false);
-					controladorMenus.menus [1].SetActive(false);
-					controladorMenus.menus [2].SetActive (false);
-					controladorMenus.menus [3].SetActive (false);
-					controladorMenus.menus [4].SetActive (false);
-					controladorMenus.menus [5].SetActive (false);
+					
 				}
 			}
 		}
