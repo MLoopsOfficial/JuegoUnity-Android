@@ -33,14 +33,14 @@ MonoBehaviour:
     m_Settings:
       method: 0
       fxaaSettings:
-        preset: 2
+        preset: 3
       taaSettings:
         jitterSpread: 0.75
         sharpen: 0.3
         stationaryBlending: 0.95
         motionBlending: 0.85
   ambientOcclusion:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       intensity: 1
       radius: 0.3
@@ -109,14 +109,14 @@ MonoBehaviour:
         texture: {fileID: 0}
         intensity: 3
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.055
-        neutralWhiteIn: 6.7
-        neutralBlackOut: 0
-        neutralWhiteOut: 15.8
+        neutralBlackIn: -0.024
+        neutralWhiteIn: 6.6
+        neutralBlackOut: -0.051
+        neutralWhiteOut: 12.5
         neutralWhiteLevel: 7.1
         neutralWhiteClip: 9.62
       basic:

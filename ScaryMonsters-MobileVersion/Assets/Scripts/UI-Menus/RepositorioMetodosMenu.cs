@@ -90,6 +90,19 @@ public class RepositorioMetodosMenu : MonoBehaviour {
 		marcadores.SetActive (false);
 		creditos.SetActive (false);
 	}
+	public void subMenuAjustesActivo()
+	{
+		menuAjustes.SetActive (false);
+		accesoRapido.SetActive (true);
+		menuPrincipal.SetActive (false);
+		pantallaInicio.SetActive (false);
+		submenuSonido.SetActive (true);
+		menuExtras.SetActive (false);
+		nuevoRegistro.SetActive (false);
+		tienda.SetActive (false);
+		marcadores.SetActive (false);
+		creditos.SetActive (false);
+	}
 	public void nuevaPartidaActivo()
 	{
 		accesoRapido.SetActive (true);

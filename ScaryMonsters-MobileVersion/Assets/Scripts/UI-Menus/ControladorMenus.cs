@@ -84,5 +84,12 @@ public class ControladorMenus : MonoBehaviour {
 				repoMenu.Sonido ();
 			}
 		}
+		//SubMenu Ajustes
+		if (Physics.Raycast (ray, out hit)) {
+			if(Input.GetMouseButtonDown(0) && hit.collider.name == "opc_SND"){
+				repoMenu.subMenuAjustesActivo ();
+				repoMenu.Sonido ();
+			}
+		}
 	}
 }
