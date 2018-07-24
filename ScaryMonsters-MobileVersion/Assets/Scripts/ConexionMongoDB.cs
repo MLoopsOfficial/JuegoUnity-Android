@@ -22,6 +22,9 @@ public class ConexionMongoDB : MonoBehaviour {
 
     void Start()
 	{
+		//Esto es para que este objeto jamas se destruya en un cambio de escena
+		DontDestroyOnLoad(this.gameObject);
+		//Conexion con Mongo DB Inicial
 		conectarBD ();
 
 	}
