@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InsertarReg : MonoBehaviour {
+	
+	[Header ("Sonidos")]
+	public RepositorioSonidos repoSonidos;
+	public Sonidos fuenteSonidos;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +19,6 @@ public class InsertarReg : MonoBehaviour {
 	}
 	public void InsertaJugador()
 	{
-		Debug.Log ("YAAAAAAAAAAA");
+		
 	}
 }
