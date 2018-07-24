@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -1653,6 +1653,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contenedorMsj: {fileID: 1871827827}
+  campoNombre: {fileID: 839970902}
+  campoPass: {fileID: 1892029981}
+  paisJug: {fileID: 438538050}
 --- !u!4 &228655712
 Transform:
   m_ObjectHideFlags: 0
@@ -6512,7 +6515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000005722046}
+  m_AnchoredPosition: {x: 0, y: -0.000005722046}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &859244694
@@ -8695,7 +8698,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1411076131}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9893,7 +9896,6 @@ GameObject:
   - component: {fileID: 1433871454}
   - component: {fileID: 1433871453}
   - component: {fileID: 1433871456}
-  - component: {fileID: 1433871455}
   m_Layer: 5
   m_Name: btn_Registro
   m_TagString: Untagged
@@ -9952,17 +9954,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1433871451}
---- !u!114 &1433871455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433871451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caa12449c64570649823241a9efee59c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1433871456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10002,8 +9993,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433871455}
-        m_MethodName: InsertaJugador
+      - m_Target: {fileID: 228655711}
+        m_MethodName: insertarDoc
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 228655711}
+        m_MethodName: buscarTodos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11808,11 +11810,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -13875,7 +13877,7 @@ GameObject:
   - component: {fileID: 1892029982}
   - component: {fileID: 1892029981}
   m_Layer: 5
-  m_Name: "NuevaContrase\xF1a"
+  m_Name: NuevoPassword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
