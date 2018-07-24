@@ -11,15 +11,13 @@ using MongoDB.Driver.Linq;
 
 public class ConexionMongoDB : MonoBehaviour {
 	[Header ("Parametros MongoDB")]
-	string msj = "Conexion Establecida con éxito";
 	string stringConexion = "mongodb://admin:a12345@ds147451.mlab.com:47451/scary-monsters";
 	public Text contenedorMsj;
 
 	[Header ("SourceTextBoxes")]
 	public InputField campoNombre;
 	public InputField campoPass;
-	public Dropdown paisJug;
-
+	public ControladorPaisRegBandera pReg;
     void Start()
 	{
 		//Esto es para que este objeto jamas se destruya en un cambio de escena
@@ -36,9 +34,9 @@ public class ConexionMongoDB : MonoBehaviour {
 		var bd = db.GetDatabase ("scary-monsters");
 		var jugadores = bd.GetCollection ("jugadores");
 		if (jugadores == null) {
-			contenedorMsj.text = "NOOOOOOOOOOOO";
+			contenedorMsj.text = "Hubo un problema con el servidor\n verifica tu internet";
 		} else {
-			contenedorMsj.text = msj;
+			contenedorMsj.text = "Conexion Establecida con Exito";
 		}
 	}
 	//Inserta un Registro
@@ -51,16 +49,19 @@ public class ConexionMongoDB : MonoBehaviour {
 		//Conversion de Text a String
 		var nombreJugador = campoNombre.text.ToString();
 		var passwordJugador = campoPass.text.ToString();
+		var paisJugador = pReg.pais;
 
 		//Insercion en MLab
 		var jug = new BsonDocument {
 			{ "posicion","0" },
 			{ "jugador",nombreJugador},
 			{ "password",passwordJugador},
-			{ "pais","Mexico" },
+			{ "pais",paisJugador },
 			{ "puntiacion","0"}
 		};
 		jugadores.Insert (jug);
+		campoNombre.text = "";
+		campoPass.text = "";
 	}
 	//Funcion Buscar Todos
 	public void buscarTodos()
