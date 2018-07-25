@@ -29,15 +29,23 @@ public class ConexionMongoDB : MonoBehaviour {
 	//Conectar la BD
 	void conectarBD()
 	{
+		try{
 		MongoClient client = new MongoClient (stringConexion);
-		var db = client.GetServer ();
-		var bd = db.GetDatabase ("scary-monsters");
-		var jugadores = bd.GetCollection ("jugadores");
-		if (jugadores == null) {
-			contenedorMsj.text = "Hubo un problema con el servidor\n verifica tu internet";
-		} else {
-			contenedorMsj.text = "Conexion Establecida con Exito";
+			var db = client.GetServer ();
+			var bd = db.GetDatabase ("scary-monsters");
+			var jugadores = bd.GetCollection ("jugadores");
+		Debug.Log("Conexion Exitosa");
 		}
+		catch(Exception ex) {
+			Debug.Log("Error de Conexion");
+		}
+		/*if (jugadores == null) {
+			
+		} else {
+			
+		}
+		*/
+
 	}
 	//Inserta un Registro
 	public void insertarDoc()
@@ -46,6 +54,7 @@ public class ConexionMongoDB : MonoBehaviour {
 		var db = client.GetServer ();
 		var bd = db.GetDatabase ("scary-monsters");
 		var jugadores = bd.GetCollection ("jugadores");
+
 		//Conversion de Text a String
 		var nombreJugador = campoNombre.text.ToString();
 		var passwordJugador = campoPass.text.ToString();
@@ -57,11 +66,11 @@ public class ConexionMongoDB : MonoBehaviour {
 			{ "jugador",nombreJugador},
 			{ "password",passwordJugador},
 			{ "pais",paisJugador },
-			{ "puntiacion","0"}
+			{ "puntuacion","0"},
+			{"estrellas","0"}
 		};
 		jugadores.Insert (jug);
-		campoNombre.text = "";
-		campoPass.text = "";
+		resetCampos ();
 	}
 	//Funcion Buscar Todos
 	public void buscarTodos()
@@ -73,5 +82,11 @@ public class ConexionMongoDB : MonoBehaviour {
 		foreach (var document in jugadores.FindAll()) {
 			Debug.Log ("Lista: \n" + document);
 		}
+	}
+	void resetCampos()
+	{
+		pReg.listaPaises.value = 0;
+		campoNombre.text = "";
+		campoPass.text = "";
 	}
 }
