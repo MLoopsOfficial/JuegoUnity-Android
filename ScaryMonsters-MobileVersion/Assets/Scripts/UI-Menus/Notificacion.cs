@@ -42,6 +42,7 @@ public class Notificacion : MonoBehaviour {
 	public void mostrarNotificacion()
 	{
 		abierta = true;
+		cerrada = false;
 		animador.SetBool ("open", true);
 		animador.SetBool ("close", false);
 		sonidoShow ();
@@ -49,6 +50,7 @@ public class Notificacion : MonoBehaviour {
 	public void cerrarNotificacion()
 	{
 		cerrada = true;
+		abierta = false;
 		animador.SetBool ("close", true);
 		animador.SetBool ("open", false);
 		contadorNotifi--;

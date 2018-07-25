@@ -14297,7 +14297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: "Notificaci\xF3n:"
-  cuerpo: Bienvenido a ScaryMonsters, se agregaran 10 estrellas
+  cuerpo: "La secci\xF3n Tienda ya esta habilitada, compra ahora $$$"
   contadorConv: 
   contadorNotifi: 1
   contenedorHeader: {fileID: 554288229}
