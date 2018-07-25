@@ -57,11 +57,11 @@ public class Notificacion : MonoBehaviour {
 	public void sonidoShow()
 	{
 		fuenteSonidos.clip = sonidoO;
-		fuenteSonidos.PlayOneShot (sonidoO, 0.5f);
+		fuenteSonidos.PlayOneShot (sonidoO, 1.0f);
 	}
 	public void sonidoClose()
 	{
 		fuenteSonidos.clip = sonidoC;
-		fuenteSonidos.PlayOneShot (sonidoC, 0.5f);
+		fuenteSonidos.PlayOneShot (sonidoC, 1.0f);
 	}
 }
