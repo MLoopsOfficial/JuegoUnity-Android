@@ -10,6 +10,9 @@ using MongoDB.Driver.GridFS;
 using MongoDB.Driver.Linq;
 
 public class ConexionMongoDB : MonoBehaviour {
+	[Header ("DisponibilidadRed")]
+	public InternetConnectionChecker internetChecker;
+
 	[Header ("Parametros MongoDB")]
 	string stringConexion = "mongodb://admin:a12345@ds147451.mlab.com:47451/scary-monsters";
 	public Text contenedorMsj;
@@ -59,18 +62,22 @@ public class ConexionMongoDB : MonoBehaviour {
 		var nombreJugador = campoNombre.text.ToString();
 		var passwordJugador = campoPass.text.ToString();
 		var paisJugador = pReg.pais;
-
-		//Insercion en MLab
-		var jug = new BsonDocument {
-			{ "posicion","0" },
-			{ "jugador",nombreJugador},
-			{ "password",passwordJugador},
-			{ "pais",paisJugador },
-			{ "puntuacion","0"},
-			{"estrellas","0"}
-		};
-		jugadores.Insert (jug);
-		resetCampos ();
+		if (internetChecker.hayInternet) {
+			//Insercion en MLab
+			var jug = new BsonDocument {
+				{ "posicion","0" },
+				{ "jugador",nombreJugador },
+				{ "password",passwordJugador },
+				{ "pais",paisJugador },
+				{ "puntuacion","0" },
+				{ "estrellas","0" }
+			};
+			jugadores.Insert (jug);
+			resetCampos ();
+		} else {
+			Debug.Log ("No dispones de Internet");
+			return;
+		}
 	}
 	//Funcion Buscar Todos
 	public void buscarTodos()
